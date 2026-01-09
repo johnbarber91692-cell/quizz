@@ -326,11 +326,7 @@
         const passPercentElement = document.getElementById('pass-percent');
         passPercentElement.innerHTML = passPercent + '%';
         totalNumberOfQuestions = questionData.length;
-        // shuffle the questionData to randomize the order of the questions
-        for (let i = questionData.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [questionData[i], questionData[j]] = [questionData[j], questionData[i]];
-        }
+        
 
         let formattedQuestions = questionData.map(formatSingleQuestionData);
         updateScore();
@@ -485,3 +481,4 @@
     </script>
   </body>
 </html>
+
