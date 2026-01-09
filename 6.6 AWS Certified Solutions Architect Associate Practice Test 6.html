@@ -373,11 +373,7 @@
 
       const renderSingleQuestion = (singleQuestionData = {}, rootIndex = 1) => {
         const { id, explanation, answers, correctAnswer, question } = singleQuestionData;
-        // shuffle the answers to randomize the order of the answers
-        // for (let i = answers.length - 1; i > 0; i--) {
-        //   const j = Math.floor(Math.random() * (i + 1));
-        //   [answers[i], answers[j]] = [answers[j], answers[i]];
-        // }
+  
         const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
         const optionsHTML = answers
           .map((option, index) => {
@@ -481,4 +477,5 @@
     </script>
   </body>
 </html>
+
 
